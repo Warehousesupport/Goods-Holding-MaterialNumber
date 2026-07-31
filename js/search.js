@@ -70,7 +70,7 @@ function search(){
 
             String(item["Product Description"] ?? "").toLowerCase().includes(keyword) ||
 
-            String(item["Storage Bin"] ?? "").toLowerCase().includes(keyword); ||
+            String(item["Storage Bin"] ?? "").toLowerCase().includes(keyword) ||
 
             String(item["Stock type"] ?? "").toLowerCase().includes(keyword);
 
