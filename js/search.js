@@ -41,13 +41,13 @@ btnClear.onclick=function(){
 
     storageFilter.value="";
 
-    tbody.innerHTML = '
+    tbody.innerHTML = `
         <tr>
             <td colspan="7" style="text-align:center;">
                 Enter a Material Number then press Search.
         </td>
         <tr>
-    ';
+    `;
 
     input.focus();
 
