@@ -68,7 +68,7 @@ function search() {
             String(item["Storage Bin"] ?? "").toLowerCase().includes(keyword) ||
             String(item["Stock Type"] ?? "").toLowerCase().includes(keyword);
 
-        if (storage && storage !== "All") {
+        if (storage !== "") {
             return match && item["Stock Type"] === storage;
         }
 
