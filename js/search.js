@@ -39,9 +39,15 @@ btnClear.onclick=function(){
 
     input.value="";
 
-    storageFilter.value="";
+    storageFilter.value="All"
 
-    showResult(warehouseData);
+    tbody.innerHTML = '
+        <tr>
+            <td colspan="7" style="text-align:center;">
+                enter a Material Number then press Search.
+        </td>
+        <tr>
+    ';
 
 }
 
