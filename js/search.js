@@ -39,7 +39,7 @@ btnClear.onclick=function(){
 
     input.value="";
 
-    storageFilter.value="All"
+    storageFilter.value="All";
 
     tbody.innerHTML = '
         <tr>
@@ -48,6 +48,8 @@ btnClear.onclick=function(){
         </td>
         <tr>
     ';
+
+    input.focus();
 
 }
 
