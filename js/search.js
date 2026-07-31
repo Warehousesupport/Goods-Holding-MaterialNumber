@@ -60,6 +60,17 @@ function search() {
     const keyword = input.value.trim().toLowerCase();
     const storage = storageFilter.value;
 
+    if (keyword === ""){
+        tbody.innerHTML = `
+            <tr>
+                <td colspan="7" style="text-align:center;">
+                    Enter a Material Number then press Search.
+                </td>
+            </tr>
+        `;
+        return;
+    }
+
     const result = warehouseData.filter(item => {
 
         const match =
