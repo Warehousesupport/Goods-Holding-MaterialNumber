@@ -82,14 +82,6 @@ function search(){
     displayResult(result);
 }
 
-        ||
-
-        item["Product Description"].toLowerCase().includes(keyword)
-
-        ||
-
-        item["Storage Bin"].toLowerCase().includes(keyword);
-
         if(storage!=""){
 
             match=match && item["Storage Type"]==storage;
