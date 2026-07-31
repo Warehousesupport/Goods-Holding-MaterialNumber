@@ -57,7 +57,30 @@ function search(){
 
         let match=
 
-        item["Product"].toLowerCase().includes(keyword)
+        function search() {
+
+    let keyword = input.value.toLowerCase().trim();
+
+    let storage = storageFilter.value;
+
+    let result = warehouseData.filter(item => {
+
+        let match =
+            String(item["Product"] ?? "").toLowerCase().includes(keyword) ||
+
+            String(item["Product Description"] ?? "").toLowerCase().includes(keyword) ||
+
+            String(item["Storage Bin"] ?? "").toLowerCase().includes(keyword);
+
+        if (storage != "") {
+            match = match && item["Storage Type"] == storage;
+        }
+
+        return match;
+    });
+
+    displayResult(result);
+}
 
         ||
 
