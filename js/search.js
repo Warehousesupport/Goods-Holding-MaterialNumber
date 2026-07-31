@@ -41,7 +41,7 @@ btnClear.onclick=function(){
 
     storageFilter.value="";
 
-    tbody.innerHTML="";
+    showResult(warehouseData);
 
 }
 
