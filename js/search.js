@@ -70,19 +70,6 @@ function search() {
     showResult(result);
 }
 
-        if(storage!=""){
-
-            match=match && item["Storage Type"]==storage;
-
-        }
-
-        return match;
-
-    });
-
-    showResult(result);
-
-}
 
 // Table
 
