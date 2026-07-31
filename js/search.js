@@ -47,42 +47,27 @@ btnClear.onclick=function(){
 
 // Search
 
-function search(){
+function search() {
 
-    let keyword=input.value.toLowerCase().trim();
+    const keyword = input.value.trim().toLowerCase();
+    const storage = storageFilter.value;
 
-    let storage=storageFilter.value;
+    const result = warehouseData.filter(item => {
 
-    let result=warehouseData.filter(item=>{
-
-        let match=
-
-        function search() {
-
-    let keyword = input.value.toLowerCase().trim();
-
-    let storage = storageFilter.value;
-
-    let result = warehouseData.filter(item => {
-
-        let match =
+        const match =
             String(item["Product"] ?? "").toLowerCase().includes(keyword) ||
-
             String(item["Product Description"] ?? "").toLowerCase().includes(keyword) ||
-
             String(item["Storage Bin"] ?? "").toLowerCase().includes(keyword) ||
+            String(item["Stock Type"] ?? "").toLowerCase().includes(keyword);
 
-            String(item["Stock type"] ?? "").toLowerCase().includes(keyword);
-
-        if (storage && Storage !== "All") {
-            return match && item["stock Type"] === storage;
-       
+        if (storage && storage !== "All") {
+            return match && item["Stock Type"] === storage;
         }
 
         return match;
     });
 
-    displayResult(result);
+    showResult(result);
 }
 
         if(storage!=""){
