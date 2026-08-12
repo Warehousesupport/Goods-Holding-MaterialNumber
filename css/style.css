@@ -186,22 +186,30 @@ footer{
 
 /* Mobile */
 
-@media(max-width:768px){
-
-    .search-row{
-        flex-direction:column;
+@media (max-width: 768px) {
+    .result-table {
+        font-size: 13px;
     }
 
-    .search-row input,
-    .search-row button,
-    .filter-row select{
-        width:100%;
+    .result-table th {
+        font-size: 13px;
+        padding: 8px 6px;
     }
 
-    #resultTable{
-        display:block;
-        overflow-x:auto;
-        white-space:nowrap;
+    .result-table td {
+        font-size: 13px;
+        padding: 8px 6px;
+        line-height: 1.3;
     }
 
+    .result-table th:first-child,
+    .result-table td:first-child {
+        width: 90px;
+        font-size: 12px;
+    }
+
+    .result-table th:nth-child(2),
+    .result-table td:nth-child(2) {
+        font-size: 13px;
+    }
 }
