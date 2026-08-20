@@ -74,8 +74,8 @@ function search() {
     const result = warehouseData.filter(item => {
 
         const match =
-            String(item["Product"] ?? "").toLowerCase().includes(keyword) ||
-            String(item["Product Description"] ?? "").toLowerCase().includes(keyword) ||
+            String(item["Material"] ?? "").toLowerCase().includes(keyword) ||
+            String(item["Material Description"] ?? "").toLowerCase().includes(keyword) ||
             String(item["Storage Bin"] ?? "").toLowerCase().includes(keyword) ||
             String(item["Stock Type"] ?? "").toLowerCase().includes(keyword);
 
@@ -112,19 +112,19 @@ function showResult(data){
 
 <tr>
 
-<td>${item["Product"]}</td>
+<td>${item["Material"]}</td>
 
-<td>${item["Product Description"]}</td>
+<td>${item["Material Description"]}</td>
 
 <td>${item["Stock Type"]}</td>
 
 <td>${item["Storage Bin"]}</td>
 
-<td>${item["Quantity"]}</td>
+<td>${item["Available Stock"]}</td>
 
 <td>${item["Base Unit of Measure"]}</td>
 
-<td>${item["Stock Reference Doc."] || "-"}</td>
+<td>${item["Special Stock Number"] || "-"}</td>
 
 </tr>
 
