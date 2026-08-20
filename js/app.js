@@ -34,7 +34,7 @@ function loadStorageType() {
 
     const list = [...new Set(
 
-        warehouseData.map(x => x["Storage Type"])
+        warehouseData.map(x => x["Stock Type"])
 
     )].sort();
 
