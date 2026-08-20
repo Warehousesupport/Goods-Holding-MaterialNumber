@@ -120,7 +120,7 @@ function showResult(data){
 
 <td>${item["Storage Bin"]}</td>
 
-<td>${item["Available Stock"]}</td>
+<td>${item["Available stock"]}</td>
 
 <td>${item["Base Unit of Measure"]}</td>
 
